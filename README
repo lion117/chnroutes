@@ -1,0 +1,20 @@
+# 使用说明
+软件使用需要优先安装 python的运行环境.
+
+#使用步骤
+1. 安装python运行环境
+2. 使用控制台命令进入当前目录下
+3. 运行 “python VPN_ip_route.py”
+4. 软件将自动生成两个文件 vpndown.bat 和 vpnup.bat
+
+# 批文件说明
+vpndown.bat ： 将IP地址从路由表中删除
+vpnup.bat   ： 将IP地址添加到路由表中, 实现固定某个IP走VPN线路的功能
+
+# 如何修改固定的IP 地址
+1. 打开VPN_ip_route.py 文件, 定位到 97行代码
+2. 修改固定的IP 地址号即可
+
+```python
+  generate_win(args.metric , 192,168,4,15)   # 修改需要单独走VPN 通道的ip
+```
